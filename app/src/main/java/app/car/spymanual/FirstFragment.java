@@ -6,6 +6,9 @@ import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -27,13 +30,16 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        TextView img = (TextView)view.findViewById(R.id.title);
+        Animation aniSlide = AnimationUtils.loadAnimation(getContext(),R.anim.zoomin);
+        img.startAnimation(aniSlide);
 
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
                 ((MainActivity)getActivity()).openSecondFragment();
             }
-        }, 4000);
+        }, 2000);
     }
 
 //    INFO PASSING BETWEEN FRAGMENTS
