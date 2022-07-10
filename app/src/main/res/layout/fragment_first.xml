@@ -9,7 +9,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="www.Hacklejandria.com"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="HACKLEJANDRIA.COM"
+        android:id="@+id/title"
+        android:textAllCaps="true"
+        android:fontFamily="monospace"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
