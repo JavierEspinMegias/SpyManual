@@ -14,6 +14,12 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_settings"
+            app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_FirstFragment_to_info2"
+            app:destination="@id/info2" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -27,12 +33,12 @@
     </fragment>
     <fragment
         android:id="@+id/settings"
-        android:name="app.car.spymanual.Settings"
+        android:name="app.car.spymanual.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/info2"
-        android:name="app.car.spymanual.Info"
+        android:name="app.car.spymanual.InfoFragment"
         android:label="fragment_info"
         tools:layout="@layout/fragment_info" />
     <fragment
