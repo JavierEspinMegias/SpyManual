@@ -73,24 +73,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-//        Toast.makeText(this, ""+item.getTitle(), Toast.LENGTH_SHORT).show();
-//        if (item.getTitle().toString().toLowerCase().equals("settings")){
-//            getSupportFragmentManager().beginTransaction().replace(android.R.id.content, new SettingsFragment()).commit();
-//        }else{
-//            getSupportFragmentManager().beginTransaction().replace(android.R.id.content, new InfoFragment()).commit();
-//        }
-
-        switch (id){
-            default:
-                Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
-            case R.id.action_settings:
-                getSupportFragmentManager().beginTransaction().replace(android.R.id.content, new SettingsFragment()).commit();
-            case R.id.action_info:
-                getSupportFragmentManager().beginTransaction().replace(android.R.id.content, new InfoFragment()).commit();
+        if (item.getTitle().equals(getResources().getString(R.string.action_settings))){
+            getSupportFragmentManager().beginTransaction().replace(android.R.id.content, new SettingsFragment()).commit();
+        }else{
+            getSupportFragmentManager().beginTransaction().replace(android.R.id.content, new InfoFragment()).commit();
         }
 
         return super.onOptionsItemSelected(item);
